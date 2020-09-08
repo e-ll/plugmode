@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.App {
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 11vh;
+  background: #ffffff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.1vw;
+  line-height: 2vw;
+  font-feature-settings: "kern" off, "liga" off;
+  color: #1b5f50;
+}
+.footer img {
+  height: 5vh;
+  margin-left: 3vw;
+}
+.footerTitle {
+  max-width: 1400px;
+}
+.title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+.fest {
+  position: absolute;
+  left: 12vw;
+  top: 12vh;
+  width: 100%;
+  height: auto;
+}
+.fest img {
+  width: 52vw;
+  height: auto;
+  max-width: 763px;
+}
+.festDate {
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 3.33vh;
+  line-height: 4vh;
+  font-weight: 800;
+  font-feature-settings: "kern" off, "liga" off;
+  color: white;
+  position: absolute;
+  top: 40vh;
+  left: 13.5vw;
+}
+
+.inputForm {
+  position: absolute;
+  top: 72vh;
+  left: 13.5vw;
+  display: flex;
+  
+}
+
+.getPost {
+  position: absolute;
+  top: 79vh;
+  left: 13.5vw;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2vw;
+  line-height: 2.57vw;
+  font-feature-settings: "kern" off, "liga" off;
+  color: #55b563;
+
+  
+}
+@media only screen and (max-width: 760px) {
+  .hiddenDesk {
+    display: none;
+  }
+
+  .hiddenMobile {
+    display: block;
+  }
+}
+
+.react-transform-component {
+  width: auto !important;
+}
