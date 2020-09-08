@@ -1,13 +1,12 @@
 import React from "react";
 
 import "./App.css";
-
+import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 import Countdown from "./Count2.js";
 import YoutubeBackground from "react-youtube-background";
 import {
   Button,
   TextField,
-  Typography,
   Grid,
   IconButton,
 } from "@material-ui/core";
@@ -15,7 +14,8 @@ import { withStyles } from "@material-ui/core/styles";
 
 const ValidationTextField = withStyles({
   root: {
-    // width: "20.8vw",
+    minWidth: "200px",
+    width: "20.8vw",
     fontSize: "1.5vw",
     "& input:valid + fieldset": {
       border: "0.35vw solid #55B563",
@@ -41,9 +41,8 @@ const ColorButton = withStyles((theme) => ({
     fontFamily: "Montserrat",
     fontStyle: "normal",
     fontWeight: "bold",
-    fontSize: "2vw",
-    lineHeight: "2.56vw",
 
+    textAlign: "center",
     color: "#FFFFFF",
     borderRadius: "2vw",
     backgroundColor: "#55B563",
@@ -52,19 +51,22 @@ const ColorButton = withStyles((theme) => ({
     },
   },
 }))(Button);
+const ColorIButton = withStyles((theme) => ({
+  root: {
+    color: "#55B563",
+    borderRadius: "2vw",
+    fill: "#55B563",
+    "&:hover": {
+      backgroundColor: "green",
+    },
+  },
+}))(IconButton);
 const ColorIconButton = withStyles((theme) => ({
   root: {
     fontFamily: "Montserrat",
     fontStyle: "normal",
     fontWeight: "bold",
-    marginLeft: "1vw",
-    marginRight: "1.38vw",
-
-    // fontSize: "30px",
-    // lineHeight: "37px",
-
     color: "#FFFFFF",
-    // borderRadius: "32px",
     backgroundColor: "#white",
     "&:hover": {
       transform: "matrix(-1, 0, 0, 1, 0, 0)",
@@ -82,18 +84,12 @@ function App() {
   return (
     <YoutubeBackground videoId={"Aj2ffdSkuiQ"}>
       <div className="App">
-        {/* <h1 className="title">Mega Green Fest</h1> */}
         <div className="fest">
           <img src="/img/fest.png" alt="fest" />
         </div>
         <span className="festDate">19-20 СЕНТЯБРЯ</span>
-        {/* <VideoBg poster={poster}>
-        {/* <VideoBg.Source src={ogg} type="video/ogg" />
-        <VideoBg.Source src={webm} type="video/webm" /> */}
-        {/* <VideoBg.Source src={mp4} type="video/mp4" />
-      </VideoBg> */}
 
-        <div style={{ position: "absolute", top: "50vh", left: "13.5vW" }}>
+        <div className="count">
           <Countdown date={`${year}-09-19T10:00:00`} />
         </div>
         {/* <Timer /> */}
@@ -115,13 +111,14 @@ function App() {
               variant="outlined"
               id="validation-outlined-input"
             />
-            <ColorButton color="primary" type="submit" variant="contained">
-              Подписаться
-            </ColorButton>
+            <ColorIButton color="primary" type="submit">
+              <CheckCircleOutlineIcon fontSize="large" />
+            </ColorIButton>
           </form>
-          <ColorButton color="primary" variant="contained">
-            Расписание
-          </ColorButton>
+        </div>
+        <span className="getPost">оставь свою почту и будь вкурсе!</span>
+
+        <div className="contacts">
           <ColorIconButton href="https://vk.com/megaevents_ekb">
             <img src="/img/vk.png" style={{ width: "8.17vw" }} alt="VK" />
           </ColorIconButton>
@@ -132,27 +129,34 @@ function App() {
               alt="Instagram"
             />
           </ColorIconButton>
+          <ColorButton
+            color="primary"
+            variant="contained"
+            href="https://docs.google.com/document/d/e/2PACX-1vQStLV49nC112_Z6z0mMiFjRHZgc4yNrXOqGis0q5iMm39bF4MuAqMk9b6Y5o-UIF12RGUbXudBXxIS/pub"
+          >
+            Расписание
+          </ColorButton>
         </div>
-        <span className="getPost">оставь свою почту и будь вкурсе!</span>
-        {/* </div> */}
         <footer className="footer">
           <Grid container direction="row">
-            <span className="footerTitle">ON-LINE THE WORLD.</span>
-            <span className="footerTitle">
-              ВИРТУАЛЬНЫЙ И ЖИВОЙ МЕЖДУНАРОДНЫЙ ЭКОЛОГИЧЕСКИЙ ФЕСТИВАЛЬ
-            </span>
-          </Grid>
-          <Grid container direction="row">
-            <Grid item>
+            <Grid item style={{ width: "70%" }} direction="row">
+              <span className="footerTitle">
+                ВИРТУАЛЬНЫЙ И ЖИВОЙ МЕЖДУНАРОДНЫЙ ЭКОЛОГИЧЕСКИЙ ФЕСТИВАЛЬ.
+                <br />
+              </span>
               <span className="footerTitle" fontWeight="fontWeightBold" m={1}>
-                NEW GREEN REALITY.
+                NEW GREEN REALITY. ЗЕЛЕНЫЕ РЕШЕНИЯ ДЛЯ ЖИЗНИ. <br />
+                19-20 СЕНТЯБРЯ
               </span>
             </Grid>
-            <Grid item>
-              <span className="footerTitle">ЗЕЛЕНЫЕ РЕШЕНИЯ ДЛЯ ЖИЗНИ. 19-20 СЕНТЯБРЯ</span>
+            <Grid item style={{ width: "30%" }} direction="row">
+              <span className="orgContact">
+                По вопросам участия в маркете:
+                <br />
+                Александра: <a href="tel:+79120413346">+7 912 04-133-46</a>
+              </span>
             </Grid>
           </Grid>
-
           <Grid
             container
             direction="row"
