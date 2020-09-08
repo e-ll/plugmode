@@ -119,10 +119,19 @@ function App() {
               Подписаться
             </ColorButton>
           </form>
-          {/* <ColorButton color="primary" variant="contained">
+          <ColorButton color="primary" variant="contained">
             Расписание
-          </ColorButton> */}
-          
+          </ColorButton>
+          <ColorIconButton href="https://vk.com/megaevents_ekb">
+            <img src="/img/vk.png" style={{ width: "8.17vw" }} alt="VK" />
+          </ColorIconButton>
+          <ColorIconButton href="https://www.instagram.com/megaekb_events">
+            <img
+              src="/img/insta.png"
+              style={{ width: "8.17vw" }}
+              alt="Instagram"
+            />
+          </ColorIconButton>
         </div>
         <span className="getPost">оставь свою почту и будь вкурсе!</span>
         {/* </div> */}
