@@ -4,12 +4,7 @@ import "./App.css";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 import Countdown from "./Count2.js";
 import YoutubeBackground from "react-youtube-background";
-import {
-  Button,
-  TextField,
-  Grid,
-  IconButton,
-} from "@material-ui/core";
+import { Button, TextField, Grid, IconButton } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 
 const ValidationTextField = withStyles({
@@ -82,61 +77,63 @@ function App() {
       : currentDate.getFullYear();
 
   return (
-    <YoutubeBackground videoId={"Aj2ffdSkuiQ"}>
-      <div className="App">
-        <div className="fest">
-          <img src="/img/fest.png" alt="fest" />
-        </div>
-        <span className="festDate">19-20 СЕНТЯБРЯ</span>
+    <div className="App">
+      <div className="content">
+        <YoutubeBackground videoId={"Aj2ffdSkuiQ"}>
+          <div className="fest">
+            <img src="/img/fest.png" alt="fest" />
+          </div>
+          <span className="festDate">19-20 СЕНТЯБРЯ</span>
 
-        <div className="count">
-          <Countdown date={`${year}-09-19T10:00:00`} />
-        </div>
-        {/* <Timer /> */}
-        {/* <div className="form"> */}
-        <div className="inputForm">
-          <form
-            action="https://festyline.us17.list-manage.com/subscribe/post?u=40fc2bc94eaa68b71519dda87&amp;id=e3ffda6771"
-            method="post"
-            id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
-            className="validate"
-            target="_blank"
-            noValidate
-          >
-            <ValidationTextField
-              position="start"
-              label="Введите email"
-              required
-              variant="outlined"
-              id="validation-outlined-input"
-            />
-            <ColorIButton color="primary" type="submit">
-              <CheckCircleOutlineIcon fontSize="large" />
-            </ColorIButton>
-          </form>
-        </div>
-        <span className="getPost">оставь свою почту и будь вкурсе!</span>
+          <div className="count">
+            <Countdown date={`${year}-09-19T10:00:00`} />
+          </div>
+          {/* <Timer /> */}
+          {/* <div className="form"> */}
+          <div className="inputForm">
+            <form
+              action="https://festyline.us17.list-manage.com/subscribe/post?u=40fc2bc94eaa68b71519dda87&amp;id=e3ffda6771"
+              method="post"
+              id="mc-embedded-subscribe-form"
+              name="mc-embedded-subscribe-form"
+              className="validate"
+              target="_blank"
+              noValidate
+            >
+              <ValidationTextField
+                position="start"
+                label="Введите email"
+                required
+                variant="outlined"
+                id="validation-outlined-input"
+              />
+              <ColorIButton color="primary" type="submit">
+                <CheckCircleOutlineIcon fontSize="large" />
+              </ColorIButton>
+            </form>
+          </div>
+          <span className="getPost">оставь свою почту и будь вкурсе!</span>
 
-        <div className="contacts">
-          <ColorIconButton href="https://vk.com/megaevents_ekb">
-            <img src="/img/vk.png" style={{ width: "8.17vw" }} alt="VK" />
-          </ColorIconButton>
-          <ColorIconButton href="https://www.instagram.com/megaekb_events">
-            <img
-              src="/img/insta.png"
-              style={{ width: "8.17vw" }}
-              alt="Instagram"
-            />
-          </ColorIconButton>
-          <ColorButton
-            color="primary"
-            variant="contained"
-            href="https://docs.google.com/document/d/e/2PACX-1vQStLV49nC112_Z6z0mMiFjRHZgc4yNrXOqGis0q5iMm39bF4MuAqMk9b6Y5o-UIF12RGUbXudBXxIS/pub"
-          >
-            Расписание
-          </ColorButton>
-        </div>
+          <div className="contacts">
+            <ColorIconButton href="https://vk.com/megaevents_ekb">
+              <img src="/img/vk.png" style={{ width: "8.17vw" }} alt="VK" />
+            </ColorIconButton>
+            <ColorIconButton href="https://www.instagram.com/megaekb_events">
+              <img
+                src="/img/insta.png"
+                style={{ width: "8.17vw" }}
+                alt="Instagram"
+              />
+            </ColorIconButton>
+            <ColorButton
+              color="primary"
+              variant="contained"
+              href="https://docs.google.com/document/d/e/2PACX-1vQStLV49nC112_Z6z0mMiFjRHZgc4yNrXOqGis0q5iMm39bF4MuAqMk9b6Y5o-UIF12RGUbXudBXxIS/pub"
+            >
+              Расписание
+            </ColorButton>
+          </div>
+        </YoutubeBackground>
         <footer className="footer">
           <Grid container direction="row">
             <Grid item style={{ width: "70%" }} direction="row">
@@ -153,7 +150,7 @@ function App() {
               <span className="orgContact">
                 По вопросам участия в маркете:
                 <br />
-                Александра: <a  href="tel:+79120413346">+7 912 04-133-46</a>
+                Александра: <a href="tel:+79120413346">+7 912 04-133-46</a>
               </span>
             </Grid>
           </Grid>
@@ -170,7 +167,7 @@ function App() {
           </Grid>
         </footer>
       </div>
-    </YoutubeBackground>
+    </div>
   );
 }
 
