@@ -13,13 +13,13 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
+        <Route exact path="/greenfest" component={App} />
         <Redirect from="*" to="/greenfest" />
-        {/* <Route path="/">
+        <Route path="/">
           <Redirect to="/greenfest" />
-        </Route> */}
-        <Route path="/greenfest" component={App} />
+        </Route>
       </Switch>
-      <App />
+      {/* <App /> */}
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
