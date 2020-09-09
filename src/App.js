@@ -79,7 +79,11 @@ function App() {
   return (
     <div className="App">
       <div className="content">
-        <YoutubeBackground videoId={"Aj2ffdSkuiQ"}>
+        <YoutubeBackground
+          style={{ minHeight: "75vh" }}
+          videoId={"Aj2ffdSkuiQ"}
+           playerOptions = {{loop:1}}
+        >
           <div className="fest">
             <img src="/img/fest.png" alt="fest" />
           </div>

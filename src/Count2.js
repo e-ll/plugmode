@@ -98,7 +98,7 @@ class Countdown extends Component {
         <span className="Countdown-col">
           <span className="Countdown-col-element">
             <span>{this.addLeadingZeros(countDown.hours)}</span>
-            <span>часов</span>
+            <span>час</span>
           </span>
         </span>
 
