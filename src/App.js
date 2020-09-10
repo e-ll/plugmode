@@ -116,7 +116,7 @@ function App() {
               </ColorIButton>
             </form>
           </div>
-          <span className="getPost">оставь свою почту и будь вкурсе!</span>
+          <span className="getPost">оставь свою почту и будь в курсе!</span>
 
           <div className="contacts">
             <ColorIconButton href="https://vk.com/megaevents_ekb">
